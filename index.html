@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato Dançando com Confetes</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .gato {
+            width: 150px;
+            height: 150px;
+            background-image: url('data:image/jpeg;base64,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'); /* Substitua pela URL da imagem de gato */
+            background-size: cover;
+            animation: dance 2s infinite;
+        }
+
+        @keyframes dance {
+            0% {
+                transform: rotate(0deg) translateX(0) translateY(0);
+            }
+            25% {
+                transform: rotate(15deg) translateX(10px) translateY(-10px);
+            }
+            50% {
+                transform: rotate(0deg) translateX(0) translateY(0);
+            }
+            75% {
+                transform: rotate(-15deg) translateX(-10px) translateY(10px);
+            }
+            100% {
+                transform: rotate(0deg) translateX(0) translateY(0);
+            }
+        }
+
+        .confete {
+            position: absolute;
+            top: -10%;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            animation: cair 3s infinite ease-in-out;
+        }
+
+        @keyframes cair {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confete:nth-child(2) { background-color: #4caf50; animation-duration: 4s; animation-delay: 0.5s; }
+        .confete:nth-child(3) { background-color: #2196f3; animation-duration: 3.5s; animation-delay: 1s; }
+        .confete:nth-child(4) { background-color: #ffeb3b; animation-duration: 5s; animation-delay: 1.5s; }
+        .confete:nth-child(5) { background-color: #9c27b0; animation-duration: 4.5s; animation-delay: 2s; }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Gato Dançando -->
+    <div class="gato"></div>
+
+    <!-- Música de Fundo (com controles) -->
+<audio controls autoplay loop>
+    <source src="stxlkin - so bitter (slowed reverb) [TubeRipper.com] (1)"
+</audio>
+
+    <script>
+        // Função para gerar confetes aleatórios
+        function gerarConfetes() {
+            for (let i = 0; i < 100; i++) {
+                let confete = document.createElement('div');
+                confete.classList.add('confete');
+                confete.style.left = `${Math.random() * 100}vw`; // Posição horizontal aleatória
+                confete.style.animationDuration = `${Math.random() * 2 + 3}s`; // Duração aleatória
+                confete.style.animationDelay = `${Math.random() * 2}s`; // Atraso aleatório
+                document.body.appendChild(confete);
+            }
+        }
+
+        // Gerar confetes ao carregar a página
+        gerarConfetes();
+    </script>
+
+</body>
+</html>
